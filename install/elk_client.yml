@@ -1,0 +1,8 @@
+---
+- hosts: elkclient
+  remote_user: "{{ ansible_system_user }}"
+  become: yes
+  vars_files:
+    - group_vars/all.yml
+  roles:
+    - { role: filebeat }
